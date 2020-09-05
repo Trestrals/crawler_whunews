@@ -10,8 +10,7 @@ msg = []
 def out(data1, key1, now_time):
     out_data = sorted(data1, key = lambda i: i[key1])
     name = "output_" + now_time + ".json"
-    fd = os.open(name, os.O_RDWR|os.O_CREAT)
-    fo = os.fdopen(fd, "w+")
+    fo = open(name, "w+")
     out_end = {}
     out_end["name"] = "武大要闻"
     out_end["order"] = key1
