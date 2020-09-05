@@ -10,6 +10,7 @@ msg = []
 def out(data1, key1, now_time):
     out_data = sorted(data1, key = lambda i: i[key1])
     name = "output_" + now_time + ".json"
+    name = name.replace(":", "-")
     fo = open(name, "w+")
     out_end = {}
     out_end["name"] = "武大要闻"
